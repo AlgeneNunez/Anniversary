@@ -16,6 +16,7 @@
     }
     .font-love { font-family: 'Pacifico', cursive; }
 
+
     .heart {
       position: fixed;
       bottom: -40px;
@@ -45,6 +46,7 @@
       100% { transform: scale(1.4); opacity: 1; }
     }
 
+
     .step {
       display: none;
       animation: fadeSlide 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
@@ -55,12 +57,14 @@
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
+
     .glass {
       background: rgba(255, 240, 245, 0.28);
       backdrop-filter: blur(18px);
       border: 1px solid rgba(255, 215, 225, 0.7);
       box-shadow: 0 30px 50px rgba(110, 0, 60, 0.3);
     }
+
 
     .gift-box {
       width: 150px;
@@ -111,6 +115,7 @@
       50% { transform: translateY(-12px); }
     }
 
+
     .balloon {
       position: absolute;
       width: 62px;
@@ -133,6 +138,7 @@
       0%,100% { transform: translateY(0) rotate(-4deg); }
       50% { transform: translateY(-30px) rotate(5deg); }
     }
+
 
     .cake {
       position: relative;
@@ -182,6 +188,7 @@
       to { transform: scale(1.2) rotate(2deg); opacity: 1; }
     }
 
+
     .confetti {
       position: fixed;
       top: -20px;
@@ -194,6 +201,7 @@
       to { transform: translateY(110vh) rotate(800deg); opacity: 0; }
     }
 
+
     .shake { animation: shake 0.4s ease; }
     @keyframes shake {
       0%,100% { transform: translateX(0); }
@@ -201,10 +209,12 @@
       75% { transform: translateX(7px); }
     }
 
+
     .heart-btn {
       transition: 0.2s;
     }
     .heart-btn:active { transform: scale(0.85); }
+
 
     .memory-card {
       background: rgba(255,245,250,0.7);
@@ -220,7 +230,7 @@
       border: 3px solid white;
     }
     button:active { transform: scale(0.97); }
-    
+   
     .video-container {
       position: relative;
       border-radius: 32px;
@@ -232,6 +242,7 @@
       border-radius: 28px;
       display: block;
     }
+
 
     .music-toggle {
       position: fixed;
@@ -260,6 +271,7 @@
     .music-toggle:active {
       transform: scale(0.9);
     }
+
 
     .photo-loop {
       display: flex;
@@ -305,6 +317,7 @@
         flex: 0 0 45%;
       }
     }
+
 
     /* Contract styles */
     .contract-item {
@@ -368,6 +381,7 @@
       text-shadow: 0 0 20px rgba(255,46,125,0.5);
     }
 
+
     /* Special Message & Video Styles */
     .special-message {
       background: rgba(255,255,255,0.15);
@@ -384,6 +398,7 @@
       max-width: 600px;
       margin: 0 auto;
     }
+
 
     /* Print Styles */
     @media print {
@@ -437,20 +452,24 @@
 </head>
 <body class="flex items-center justify-center px-4 relative">
 
+
   <audio id="bgMusic" loop preload="auto">
     <source src="C:\Users\Algene\Downloads\Demon Slayer_ Gurenge Wedding Entrance.mp3" type="audio/mpeg">
   </audio>
 
+
   <button class="music-toggle" id="musicToggle" onclick="toggleMusic()" title="Toggle Music"> 🔊 </button>
+
 
   <div class="balloon bg-pink-400 left-6 top-16"></div>
   <div class="balloon bg-purple-400 right-6 top-24" style="animation-delay:1.2s"></div>
   <div class="balloon bg-yellow-300 left-[15%] bottom-12" style="animation-delay:2s"></div>
   <div class="balloon bg-rose-400 right-[20%] bottom-16" style="animation-delay:0.6s"></div>
 
+
   <main class="relative z-10 w-full max-w-3xl">
     <div class="glass rounded-[2.8rem] p-5 sm:p-9 text-center min-h-[600px] flex items-center justify-center transition-all">
-      
+     
       <!-- STEP 0 : Welcome -->
       <section class="step active w-full" data-step="0">
         <p class="uppercase tracking-[0.4em] text-sm text-pink-900 mb-3 font-semibold">✨ Happy Anniversary ✨</p>
@@ -458,6 +477,7 @@
         <p class="text-lg sm:text-xl text-rose-900/90 max-w-xl mx-auto mb-7">Our anniversary reminds me that the happiest parts of my life are the moments I share with you. Here's to us, our love, and all the beautiful memories still ahead of us.</p>
         <button onclick="startJourney()" class="bg-white text-pink-700 px-9 py-4 rounded-full font-bold shadow-2xl hover:scale-105 transition duration-200">💗 Begin Our Journey 💗</button>
       </section>
+
 
       <!-- STEP 1 : First Heart Catch Game -->
       <section class="step w-full" data-step="1">
@@ -470,6 +490,7 @@
         <p class="text-sm mt-4 text-pink-800/70 animate-pulse">💘 tap the moving heart 💘</p>
       </section>
 
+
       <!-- STEP 2 : FIRST PICTURE -->
       <section class="step w-full" data-step="2">
         <h2 class="font-love text-4xl sm:text-5xl mb-2 text-rose-900">A Glimpse Of Us 📸</h2>
@@ -481,6 +502,7 @@
         <button onclick="nextStep()" class="mt-3 bg-pink-600 text-white px-7 py-3 rounded-full font-bold shadow-lg hover:bg-pink-700 transition">💞 Continue 💞</button>
       </section>
 
+
       <!-- STEP 3 : CATCH HEART BEFORE PHOTO LOOP -->
       <section class="step w-full" data-step="3">
         <h2 class="font-love text-4xl sm:text-5xl mb-3 text-rose-900">Catch 3 Hearts 💕</h2>
@@ -491,6 +513,7 @@
         </div>
         <p class="text-sm mt-4 text-pink-800/70 animate-pulse">❤️ tap the dancing heart ❤️</p>
       </section>
+
 
       <!-- STEP 4 : PHOTO LOOP -->
       <section class="step w-full" data-step="4">
@@ -508,6 +531,7 @@
         <button onclick="nextStep()" class="mt-4 bg-pink-600 text-white px-7 py-3 rounded-full font-bold shadow-lg hover:bg-pink-700 transition">💞 Continue 💞</button>
       </section>
 
+
       <!-- STEP 5 : SECOND ROUND CATCH HEARTS -->
       <section class="step w-full" data-step="5">
         <h2 class="font-love text-4xl sm:text-5xl mb-3 text-rose-900">Catch My Heart Again 💕</h2>
@@ -518,6 +542,7 @@
         </div>
         <p class="text-sm mt-4 text-pink-800/70">❤️ quick! tap the dancing heart ❤️</p>
       </section>
+
 
       <!-- STEP 6 : SECOND PICTURE -->
       <section class="step w-full" data-step="6">
@@ -532,6 +557,7 @@
         <button onclick="nextStep()" class="mt-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-3 rounded-full font-bold shadow-xl transition hover:scale-105">💖 Next Surprise 💖</button>
       </section>
 
+
       <!-- STEP 7 : GIFT BOX -->
       <section class="step w-full" data-step="7">
         <h2 class="font-love text-4xl sm:text-6xl mb-5 text-rose-900">✨ A Special Gift ✨</h2>
@@ -541,6 +567,7 @@
         </div>
         <p id="giftMessage" class="hidden mt-8 text-xl font-semibold text-rose-900 bg-white/20 inline-block px-6 py-3 rounded-full">💎 My whole heart belongs to you, today & always. 💎</p>
       </section>
+
 
       <!-- STEP 8 : CAKE + BLOW CANDLE -->
       <section class="step w-full" data-step="8">
@@ -553,6 +580,7 @@
         <p class="mb-5 text-rose-800">Make a wish, my love. Blow out the candle 💨</p>
         <button onclick="blowCandle()" class="bg-rose-600 hover:bg-rose-700 text-white px-9 py-4 rounded-full font-bold shadow-xl transition">🕯️ Blow Candle 🕯️</button>
       </section>
+
 
       <!-- STEP 9 : FINAL MESSAGE -->
       <section class="step w-full" data-step="9">
@@ -567,6 +595,7 @@
         <button onclick="nextStep()" class="mt-6 bg-white text-pink-700 px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition">💕 One More Heart Journey 💕</button>
       </section>
 
+
       <!-- STEP 10 : THIRD ROUND CATCH HEARTS -->
       <section class="step w-full" data-step="10">
         <h2 class="font-love text-4xl sm:text-5xl mb-3 text-rose-900">One Last Beat 💓💖</h2>
@@ -577,6 +606,7 @@
         </div>
         <p class="text-sm mt-4 text-pink-800/70 animate-pulse">✨ catch the hearts of pure love ✨</p>
       </section>
+
 
       <!-- STEP 11 : VIDEO SLIDE -->
       <section class="step w-full" data-step="11">
@@ -592,12 +622,13 @@
         <button onclick="showContract()" class="mt-6 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition">📜 View Our Love Contract 📜</button>
       </section>
 
+
       <!-- STEP 12 : LOVE CONTRACT -->
       <section class="step w-full" data-step="12">
         <div class="text-left max-w-2xl mx-auto">
           <h2 class="font-love text-4xl sm:text-5xl text-center text-rose-900 mb-2">💖 Our Love Contract 💖</h2>
           <p class="text-center text-rose-800/80 mb-4 text-sm">This agreement is bound by love, trust, and forever. Breaking any term results in penalties of extra hugs, kisses and 500 pesos.</p>
-          
+         
           <!-- PRINTABLE CONTRACT -->
           <div id="printableContract">
             <div style="text-align:center; margin-bottom:20px;">
@@ -618,6 +649,7 @@
               <div class="contract-item"><strong>9.</strong> Grow together, learn together, and never stop evolving as a couple.</div>
               <div class="contract-item"><strong>10.</strong> Choose each other, every single day, for the rest of our lives.</div>
             </div>
+
 
             <!-- Signature & Fingerprint Section (Printable) -->
             <div style="margin-top:24px; background:#fce4ec; border-radius:20px; padding:16px; border:1px solid #f06292;">
@@ -641,6 +673,7 @@
             </div>
           </div>
           <!-- END PRINTABLE CONTRACT -->
+
 
           <!-- Signature & Fingerprint Section (Interactive) -->
           <div class="mt-6 bg-white/10 backdrop-blur-sm rounded-3xl p-5 border border-white/20 no-print">
@@ -674,6 +707,7 @@
         <button onclick="restartJourney()" class="mt-6 bg-white text-pink-700 px-6 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition text-sm no-print">💫 Restart Journey</button>
       </section>
 
+
       <!-- STEP 13 : SPECIAL SURPRISE MESSAGE -->
       <section class="step w-full" data-step="13">
         <div class="max-w-2xl mx-auto">
@@ -688,6 +722,7 @@
           </div>
         </div>
       </section>
+
 
       <!-- STEP 14 : FINAL VIDEO SURPRISE -->
       <section class="step w-full" data-step="14">
@@ -707,6 +742,7 @@
     </div>
   </main>
 
+
   <script>
     let currentStep = 0;
     let score1 = 0, score2 = 0, score3 = 0, scoreLoop = 0;
@@ -714,6 +750,7 @@
     let intervalId1 = null, intervalId2 = null, intervalId3 = null, intervalIdLoop = null;
     let musicPlaying = false, musicStarted = false;
     let contractSealed = false;
+
 
     const audio = document.getElementById('bgMusic');
     const musicToggle = document.getElementById('musicToggle');
@@ -731,14 +768,16 @@
     const gameAreaLoop = document.getElementById('heartGameLoop');
     const scoreElLoop = document.getElementById('scoreLoop');
 
+
     function toggleMusic() {
-      if (audio.paused) { audio.play().catch(e => console.log(e)); musicToggle.textContent = '🔊'; musicPlaying = true; } 
+      if (audio.paused) { audio.play().catch(e => console.log(e)); musicToggle.textContent = '🔊'; musicPlaying = true; }
       else { audio.pause(); musicToggle.textContent = '🔇'; musicPlaying = false; }
     }
     function startMusic() {
       if (!musicStarted) { audio.volume = 0.5; audio.play().catch(e => console.log(e)); musicToggle.textContent = '🔊'; musicPlaying = true; musicStarted = true; }
     }
     function startJourney() { startMusic(); nextStep(); }
+
 
     function showStep(index) {
       if (index >= steps.length) index = steps.length - 1;
@@ -765,7 +804,9 @@
       }
     }
 
+
     function nextStep() { if (currentStep + 1 < steps.length) showStep(currentStep + 1); }
+
 
     function moveHeartRandomly(btn, area) {
       if (!area || !btn) return;
@@ -778,6 +819,7 @@
       btn.style.left = (Math.random() * maxX) + 'px';
       btn.style.top = (Math.random() * maxY) + 'px';
     }
+
 
     function startHeartMoving1() {
       if (intervalId1) clearInterval(intervalId1);
@@ -792,6 +834,7 @@
     function resetGame3() { score3 = 0; scoreEl3.textContent = '0'; if (catchBtn3) catchBtn3.style.display = 'flex'; gameActive3 = true; }
     function resetGameLoop() { scoreLoop = 0; scoreElLoop.textContent = '0'; if (catchBtnLoop) catchBtnLoop.style.display = 'flex'; gameActiveLoop = true; }
 
+
     if (catchBtn1) {
       catchBtn1.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -799,10 +842,11 @@
         score1++; scoreEl1.textContent = score1;
         catchBtn1.classList.add('shake'); setTimeout(() => catchBtn1.classList.remove('shake'), 300);
         launchConfetti(8);
-        if (score1 === 5) { clearInterval(intervalId1); intervalId1 = null; gameActive1 = false; setTimeout(() => showStep(2), 500); } 
+        if (score1 === 5) { clearInterval(intervalId1); intervalId1 = null; gameActive1 = false; setTimeout(() => showStep(2), 500); }
         else moveHeartRandomly(catchBtn1, gameArea1);
       });
     }
+
 
     function startHeartMovingLoop() {
       if (intervalIdLoop) clearInterval(intervalIdLoop);
@@ -821,10 +865,11 @@
         scoreLoop++; scoreElLoop.textContent = scoreLoop;
         catchBtnLoop.classList.add('shake'); setTimeout(() => catchBtnLoop.classList.remove('shake'), 300);
         launchConfetti(10);
-        if (scoreLoop === 3) { clearInterval(intervalIdLoop); intervalIdLoop = null; gameActiveLoop = false; setTimeout(() => showStep(4), 500); } 
+        if (scoreLoop === 3) { clearInterval(intervalIdLoop); intervalIdLoop = null; gameActiveLoop = false; setTimeout(() => showStep(4), 500); }
         else moveHeartRandomly(catchBtnLoop, gameAreaLoop);
       });
     }
+
 
     function startHeartMoving2() {
       if (intervalId2) clearInterval(intervalId2);
@@ -843,10 +888,11 @@
         score2++; scoreEl2.textContent = score2;
         catchBtn2.classList.add('shake'); setTimeout(() => catchBtn2.classList.remove('shake'), 300);
         launchConfetti(10);
-        if (score2 === 5) { clearInterval(intervalId2); intervalId2 = null; gameActive2 = false; setTimeout(() => showStep(6), 500); } 
+        if (score2 === 5) { clearInterval(intervalId2); intervalId2 = null; gameActive2 = false; setTimeout(() => showStep(6), 500); }
         else moveHeartRandomly(catchBtn2, gameArea2);
       });
     }
+
 
     function startHeartMoving3() {
       if (intervalId3) clearInterval(intervalId3);
@@ -865,10 +911,11 @@
         score3++; scoreEl3.textContent = score3;
         catchBtn3.classList.add('shake'); setTimeout(() => catchBtn3.classList.remove('shake'), 300);
         launchConfetti(12);
-        if (score3 === 7) { clearInterval(intervalId3); intervalId3 = null; gameActive3 = false; setTimeout(() => showStep(11), 600); } 
+        if (score3 === 7) { clearInterval(intervalId3); intervalId3 = null; gameActive3 = false; setTimeout(() => showStep(11), 600); }
         else moveHeartRandomly(catchBtn3, gameArea3);
       });
     }
+
 
     function openGift(box) {
       if (box.classList.contains('open')) return;
@@ -878,11 +925,13 @@
       setTimeout(() => showStep(8), 2300);
     }
 
+
     function blowCandle() {
       document.getElementById('flame').style.display = 'none';
       launchConfetti(180);
       setTimeout(() => showStep(9), 1200);
     }
+
 
     function showContract() {
       showStep(12);
@@ -890,10 +939,12 @@
       updatePrintFields();
     }
 
+
     function showSpecialSurprise() {
       showStep(13);
       launchConfetti(120);
     }
+
 
     function pressFingerprint(id) {
       const el = document.getElementById(id);
@@ -902,6 +953,7 @@
       else el.textContent = '🖐️';
       updatePrintFields();
     }
+
 
     function updatePrintFields() {
       const sig1 = document.getElementById('sig1').value.trim();
@@ -912,6 +964,7 @@
       const dateStr = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
       document.getElementById('printDate').textContent = dateStr;
     }
+
 
     function sealContract() {
       const sig1 = document.getElementById('sig1').value.trim();
@@ -936,6 +989,7 @@
       }, 500);
     }
 
+
     function printContract() {
       if (!contractSealed) {
         const seal = confirm('⚠️ Contract not yet sealed. Print a draft copy anyway?');
@@ -946,6 +1000,7 @@
         window.print();
       }, 300);
     }
+
 
     function launchConfetti(amount = 70) {
       const colors = ['#ff3b6f', '#ffd966', '#e84393', '#6a4c93', '#ffe5b4', '#ff8c42', '#ffffff', '#ffb3c6'];
@@ -962,6 +1017,7 @@
         setTimeout(() => c.remove(), 5000);
       }
     }
+
 
     function restartJourney() {
       score1 = 0; score2 = 0; score3 = 0; scoreLoop = 0;
@@ -995,6 +1051,7 @@
         if (currentStep === 3 && catchBtnLoop) startHeartMovingLoop();
       }, 100);
     }
+
 
     function createFloatingHearts() {
       setInterval(() => {
@@ -1037,4 +1094,9 @@
     }, { once: true });
   </script>
 </body>
-</html>3 
+</html>
+
+
+
+
+
